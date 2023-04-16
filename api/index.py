@@ -58,7 +58,7 @@ def to():
     return str(validator.upgrade_id(id)) # 大陆居民身份证 18 位
 
 @app.route('/')
-def result():
+def index():
    return render_template('index.html')
 #if __name__ == '__main__':
 #   app.run(debug = True)

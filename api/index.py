@@ -1,7 +1,8 @@
 from flask import Flask, render_template , request
+from flask_cors import CORS 
 from id_validator import validator
 app = Flask(__name__)
-
+cors = CORS(app)
 
 @app.route('/')
 def hello():

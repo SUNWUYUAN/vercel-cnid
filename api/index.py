@@ -22,7 +22,7 @@ def generate():
     sex=request.args['sex']
     return str(validator.fake_id(True, area, birthday, sex)) # 大陆居民身份证 18 位
 @app.route('/to')
-def generate():
+def to():
     id=request.args['id']
     return str(validator.upgrade_id(id)) # 大陆居民身份证 18 位
 
@@ -30,5 +30,5 @@ def generate():
 def result():
    dict = {'phy':50,'che':60,'maths':70}
    return render_template('result.html', result = dict)
-if __name__ == '__main__':
-   app.run(debug = True)
+#if __name__ == '__main__':
+#   app.run(debug = True)
